@@ -227,4 +227,28 @@ public class Facade
         {
             return this.Menu.GetBatallaI() && !this.Menu.GetBatallaT();
         }
+        public string AddPokemosA(string pokemon)
+        {
+            return this.Menu.AgregarPokemonesA(pokemon);
+        }
+
+        public string AddPokemosD(string pokemon)
+        {
+            return this.Menu.AgregarPokemonesD(pokemon);
+        }
+        
+        public string ShowPokemonNum()
+        {
+            return this.Menu.MostrarNumPokemon();
+        }
+
+        public string ShowAviableItems()
+        {
+            return this.Menu.MostrarItemsDisponibles();
+        }
+
+        public string UseItem(string item, int numeroPokemon)
+        {
+            return this.Menu.UsarItem(item, numeroPokemon);
+        }
     }
