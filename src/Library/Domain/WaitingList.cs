@@ -33,8 +33,11 @@ public class WaitingList
         {
             throw new ArgumentException(nameof(displayName));
         }
-        
-        if (this.FindTrainerByDisplayName(displayName) != null) return false;
+
+        if (this.FindTrainerByDisplayName(displayName) != null)
+        {
+            return false;
+        }
         trainers.Add(new Trainer(displayName));
         return true;
     }
