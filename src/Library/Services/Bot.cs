@@ -7,7 +7,7 @@ using Discord.Commands;
 using Discord.WebSocket;
 
 namespace Ucu.Poo.DiscordBot.Services;
-//Intento de commit
+//Intento de commitq
 /// <summary>
 /// Esta clase implementa el bot de Discord.
 /// </summary>

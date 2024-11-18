@@ -92,7 +92,9 @@ public class WaitingList
         {
             return null;
         }
-
-        return this.trainers[0];
+        //Implementacion para
+        Random random = new Random();
+        int number = random.Next(0, trainers.Count - 1);
+        return this.trainers[number];
     }
 }
