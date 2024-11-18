@@ -1,3 +1,5 @@
+using AdapterNamespace;
+
 namespace Ucu.Poo.DiscordBot.Domain;
 
 /// <summary>
@@ -5,7 +7,7 @@ namespace Ucu.Poo.DiscordBot.Domain;
 /// </summary>
 public class BattlesList
 {
-    private List<Battle> battles = new List<Battle>();
+    private List<BattleAdapter> battles = new List<BattleAdapter>();
 
     /// <summary>
     /// Crea una nueva batalla entre dos jugadores.
@@ -15,7 +17,7 @@ public class BattlesList
     /// <returns>La batalla creada.</returns>
     public Battle AddBattle(string player1, string player2)
     {
-        var battle = new Battle(player1, player2);
+        var battle = new BattleAdapter(player1, player2);
         this.battles.Add(battle);
         return battle;
     }
