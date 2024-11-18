@@ -233,7 +233,7 @@ public class Jugador
     /// <summary>
     /// Muestra todos los items disponibles en el inventario del jugador.
     /// </summary>
-    public string Mostrar_items() //Este método llama al mostrar items de InventarioItems para mostrar los items disponibles que tiene el jugador
+    public string MostrarItems() //Este método llama al mostrar items de InventarioItems para mostrar los items disponibles que tiene el jugador
     {
         return inventarioJugador.MostrarItems();
     }

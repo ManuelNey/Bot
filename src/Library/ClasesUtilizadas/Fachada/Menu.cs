@@ -297,7 +297,7 @@ namespace Library.Combate
         if (batallaActual.GetBatallaIniciada())
         {
             Jugador jugador = batallaActual.GetAtacante();
-            return jugador.Mostrar_items();
+            return jugador.MostrarItems();
         }
 
         return "";
