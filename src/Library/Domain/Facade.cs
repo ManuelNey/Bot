@@ -1,3 +1,5 @@
+using Library.Combate;
+
 namespace Ucu.Poo.DiscordBot.Domain;
 
 /// <summary>
@@ -16,6 +18,7 @@ public class Facade
     {
         this.WaitingList = new WaitingList();
         this.BattlesList = new BattlesList();
+        this.Menu = new Menu();
     }
 
     /// <summary>
@@ -45,6 +48,7 @@ public class Facade
     private WaitingList WaitingList { get; }
     
     private BattlesList BattlesList { get; }
+    private Menu Menu { get; }
 
     /// <summary>
     /// Agrega un jugador a la lista de espera.
@@ -138,16 +142,16 @@ public class Facade
         // El símbolo ? luego de Trainer indica que la variable opponent puede
         // referenciar una instancia de Trainer o ser null.
         Trainer? opponent;
-        
+
         if (!OpponentProvided() && !SomebodyIsWaiting())
         {
             return "No hay nadie esperando";
         }
-        
+
         if (!OpponentProvided()) // && SomebodyIsWaiting
         {
             opponent = this.WaitingList.GetAnyoneWaiting();
-            
+
             // El símbolo ! luego de opponent indica que sabemos que esa
             // variable no es null. Estamos seguros porque SomebodyIsWaiting
             // retorna true si y solo si hay usuarios esperando y en tal caso
@@ -159,14 +163,14 @@ public class Facade
         // variable no es null. Estamos seguros porque OpponentProvided hubiera
         // retorna false antes y no habríamos llegado hasta aquí.
         opponent = this.WaitingList.FindTrainerByDisplayName(opponentDisplayName!);
-        
+
         if (!OpponentFound())
         {
             return $"{opponentDisplayName} no está esperando";
         }
-        
+
         return this.CreateBattle(playerDisplayName, opponent!.DisplayName);
-        
+
         // Funciones locales a continuación para mejorar la legibilidad
 
         bool OpponentProvided()
@@ -184,4 +188,43 @@ public class Facade
             return opponent != null;
         }
     }
-}
+    
+
+    private string InitializeBattle(string playerDisplayName, string opponentDisplayName)
+        {
+            string result = this.Menu.UnirJugadores(playerDisplayName);
+            result += "\n" + this.Menu.UnirJugadores(opponentDisplayName);
+            result += "\n" + this.Menu.IniciarEnfrentamiento();
+            return result;
+        }
+
+        public string UsePokemonMove(int moveIndex)
+        {
+            return this.Menu.UsarMovimientos(moveIndex);
+        }
+
+        public string ShowAvailableMoves()
+        {
+            return this.Menu.MostrarAtaquesDisponibles();
+        }
+
+        public string ChangePokemon(int pokemonIndex)
+        {
+            return this.Menu.CambiarPokemon(pokemonIndex);
+        }
+
+        public string ShowPlayerStatus()
+        {
+            return this.Menu.MostrarEstadoEquipo();
+        }
+
+        public string ShowOpponentStatus()
+        {
+            return this.Menu.MostrarEstadoRival();
+        }
+
+        public bool IsBattleOngoing()
+        {
+            return this.Menu.GetBatallaI() && !this.Menu.GetBatallaT();
+        }
+    }

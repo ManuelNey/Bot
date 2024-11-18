@@ -37,7 +37,6 @@ public class WaitingList
         if (this.FindTrainerByDisplayName(displayName) != null) return false;
         trainers.Add(new Trainer(displayName));
         return true;
-
     }
 
     /// <summary>
