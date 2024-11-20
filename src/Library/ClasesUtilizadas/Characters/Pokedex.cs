@@ -323,17 +323,17 @@ public static class Pokedex
         MovimientoDeAtaque treparrocas = new MovimientoDeAtaque("Treparrocas", 90, listatiposdisponibles[5], 85);//Normal
         
         //Movimientos de Stufful
-        MovimientoEspecial punioCertero = new MovimientoEspecial("Puñu Certero", 150, listatiposdisponibles[12], 100, listaEfectos[0]); //lucha, Dormir
+        MovimientoEspecial punioCertero = new MovimientoEspecial("Puñu Certero", 80, listatiposdisponibles[12], 100, listaEfectos[0]); //lucha, Dormir
         MovimientoDeAtaque demolicion = new MovimientoDeAtaque("Demolicion", 75, listatiposdisponibles[12], 100); //Lucha
         MovimientoDeAtaque derribo = new MovimientoDeAtaque("Derribo", 90, listatiposdisponibles[5], 95);//Normal
         
         //Movimientos de Gardevoir
-        MovimientoEspecial premonicion = new MovimientoEspecial("Premonicion", 120, listatiposdisponibles[13], 95, listaEfectos[0]);// Psiquico, Dormir
+        MovimientoEspecial premonicion = new MovimientoEspecial("Premonicion", 75, listatiposdisponibles[13], 95, listaEfectos[0]);// Psiquico, Dormir
         MovimientoDeAtaque psiocarga = new MovimientoDeAtaque("Psicocarga", 80, listatiposdisponibles[13], 100);// Psiquico
         MovimientoDeAtaque rapidez = new MovimientoDeAtaque("Rapidez", 60, listatiposdisponibles[5], 100);// Normal
             
         //Movimientos de Arbok
-        MovimientoEspecial lanzaMugre = new MovimientoEspecial("Lanza Mugre", 120, listatiposdisponibles[14], 100, listaEfectos[2]);//Veneno, Envenenar
+        MovimientoEspecial lanzaMugre = new MovimientoEspecial("Lanza Mugre", 80!, listatiposdisponibles[14], 100, listaEfectos[2]);//Veneno, Envenenar
         MovimientoDeAtaque colaVeneno = new MovimientoDeAtaque("Cola Veneno", 50, listatiposdisponibles[14], 100);//Veneno
         MovimientoDeAtaque fuerza = new MovimientoDeAtaque("Fuerza", 80, listatiposdisponibles[5], 90);//Normal
         
