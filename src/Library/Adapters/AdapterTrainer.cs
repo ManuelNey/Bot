@@ -90,7 +90,7 @@ public class AdapterTrainer: Trainer
         return _jugador.MostarEstadoEquipo();
     }
 
-    public string UsarItem(string item, Pokemon pokemon)
+    public string UseItem(string item, Pokemon pokemon)
     {
         return _jugador.UsarItem(item, pokemon);
     }
