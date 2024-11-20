@@ -262,5 +262,14 @@ public class Facade
         return this.Menu.UsarItem(item, numeroPokemon);
     }
 
-
+    public string ShowAtualPokemonA()
+    {
+        return Menu.GetNamePokemonA();
+    }
+    
+    public string ShowAtualPokemonD()
+    {
+        return Menu.GetNamePokemonD();
+    }
+    
 }

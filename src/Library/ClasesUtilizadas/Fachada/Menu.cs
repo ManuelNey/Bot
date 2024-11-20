@@ -345,5 +345,16 @@ namespace Library.Combate
             }
             return "La batalla no ha iniciado";
         }
+
+    public string GetNamePokemonA()
+    {
+        return JugadorA().GetNamePokemonTurno();
+    }
+    
+    public string GetNamePokemonD()
+    {
+        return JugadorD().GetNamePokemonTurno();
+    }
+    
     }
 }
