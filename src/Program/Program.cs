@@ -11,13 +11,13 @@ internal static class Program
     /// <summary>
     /// Punto de entrada al programa.
     /// </summary>
-    private static void Main()
+    private static void goodd()
     {
         //DemoFacade();
         DemoBot();
     }
 
-    private static void DemoFacade()
+    private static void  Main()
     {
         Console.WriteLine(Facade.Instance.AddTrainerToWaitingList("player"));
         Console.WriteLine(Facade.Instance.AddTrainerToWaitingList("opponent"));
