@@ -167,7 +167,7 @@ public class Pokemon
         if (numero == 0)
         {
             danio *= 1.2;
-            texto += ", Además ha sido un ataque crítico";
+            texto += ", Además ha sido un ataque crítico.";
         }
         // Aplicar el daño a la defensa o vida o un poco y un poco
         if (defensa > danio)
@@ -204,7 +204,7 @@ public class Pokemon
     {
         double porcentaje = (numero *this.vidaTotal) / 100;
         this.vidaActual -= porcentaje;
-        return $"{GetName()} ha recibido {porcentaje} de daño adicional";
+        return $"{GetName()} ha recibido {porcentaje} de daño adicional. \n";
     }
 
     /// <summary>
@@ -225,7 +225,7 @@ public class Pokemon
         if (estado == null)
         {
             estado = Efecto.CrearCopia(efecto.GetType()); // Usa el tipo del efecto para crear una nueva instancia
-            return $"{GetName()} caído bajo el efecto {efecto.GetType().Name}\n";
+            return $"\n{GetName()} caído bajo el efecto {efecto.GetType().Name}\n";
         }
 
         return "";

@@ -240,12 +240,12 @@ namespace Library.Combate
             {
                 JugadorDefensor.ActualizarEstadoEquipo();
                 JugadorAtacante.ActualizarEstadoEquipo();
-                return texto;
             }
             if (!JugadorAtacante.TeamIsAlive() || !JugadorDefensor.TeamIsAlive())
             {
                 TerminarBatalla();
                 texto += TerminarBatalla();
+                return texto;
             }
             else
             {
@@ -258,12 +258,13 @@ namespace Library.Combate
         /// <summary>
         /// Cambia el turno entre el jugador atacante y el defensor. El atacante es el defensor y viceversa
         /// </summary>
-        private void CambiarTurno()
+        private string CambiarTurno()
         {
             Jugador temporal = JugadorAtacante;
             JugadorAtacante = JugadorDefensor;
             JugadorDefensor = temporal;
             Turnos = !Turnos;
+            return $"Ahora es turno de {JugadorAtacante.GetName()} \n";
         }
     }
 }

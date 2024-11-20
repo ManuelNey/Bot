@@ -261,12 +261,12 @@ namespace Library.Combate
                     int numeroAleatorio = random.Next(1, 101);
                     if (numeroAleatorio <= movimientoAtaque.GetPrecision())
                     {
-                        texto += "Y ha acertado";
-                        texto +=$"{batallaActual.RecibirAtaqueB(movimientoAtaque)}\n";
+                        texto += "Y ha acertado.";
+                        texto +=$"\n{batallaActual.RecibirAtaqueB(movimientoAtaque)}\n";
                     }
                     else
                     {
-                        texto += ("Y ha fallado");
+                        texto += ("Y ha fallado.\n");
                     }
 
                     if (movimientoAtaque is IMovimientoEspecial movimientoEspecial)
