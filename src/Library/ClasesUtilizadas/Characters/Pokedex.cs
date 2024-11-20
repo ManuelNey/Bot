@@ -39,12 +39,11 @@ public static class Pokedex
     /// </summary>  
     public static string MostrarCatalogo()
     {
-        string catalogo = "";
+        string catalogo = "Los pokemones disponibles son:\n";
         foreach (Pokemon pokemon in pokemonsdisponibles)
         {
-            catalogo += $"{pokemon.GetName()}\n";
+            catalogo += $"{pokemon.GetName()} \n";
         }
-
         return catalogo;
     }
 

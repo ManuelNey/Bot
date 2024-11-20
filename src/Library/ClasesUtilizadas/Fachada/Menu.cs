@@ -99,6 +99,13 @@ namespace Library.Combate
     {
         return batallaActual.AgregarPokemonBA(pokemon); 
     }
+    /// <summary>
+    /// Propiedad para obtener al jugador A
+    /// </summary>
+    public Jugador JugadorA()
+    {
+        return batallaActual.GetAtacante();
+    }
 
     /// <summary>
     /// Agrega un Pokémon al equipo del defensor.
@@ -106,6 +113,13 @@ namespace Library.Combate
     public string AgregarPokemonesD(string pokemon)
     {
         return batallaActual.AgregarPokemonBD(pokemon);
+    }
+    /// <summary>
+    /// Propiedad para obtener al jugador D
+    /// </summary>
+    public Jugador JugadorD()
+    {
+        return batallaActual.GetDefensor();
     }
 
     /// <summary>
@@ -288,7 +302,13 @@ namespace Library.Combate
         }
         return texto;
     }
-
+    /// <summary>
+    /// Muestra el número de Pokémon del equipo atacante.
+    /// </summary>
+    public string MostrarCatalogo()
+    {
+        return Pokedex.MostrarCatalogo();
+    }
     /// <summary>
     /// Muestra los ítems disponibles en el inventario del jugador atacante.
     /// </summary>

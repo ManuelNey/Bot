@@ -45,7 +45,7 @@ public class BattleCommand : ModuleBase<SocketCommandContext>
         }
         else
         {
-            result = $"No hay un usuario {opponentDisplayName}";
+            result = $"No encontré a {opponentDisplayName}";
         }
 
         await ReplyAsync(result);
