@@ -179,12 +179,12 @@ namespace Library.Combate
             if (!JugadorAtacante.TeamIsAlive())
             {
                 texto += $"¡Ha ganado el jugador {JugadorDefensor.GetName()}!" + " \nLa batalla ha terminado";
-                this.BatallaTerminada = true;
+                BatallaTerminada = true;
             }
             else if (!JugadorDefensor.TeamIsAlive())
             {
                 texto += $"¡Ha ganado el jugador {JugadorAtacante.GetName()}!" + " \nLa batalla ha terminado";
-                this.BatallaTerminada = true;
+                BatallaTerminada = true;
             }
             return texto;
         }
@@ -216,7 +216,7 @@ namespace Library.Combate
         public string AvanzarTurno()
         {
             string texto = "";
-            VerificarPokemonDefensorDebilitado();
+            texto += VerificarPokemonDefensorDebilitado()+ "\n";
 
             if (BatallaTerminada)
             {

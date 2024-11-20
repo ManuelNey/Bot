@@ -27,7 +27,7 @@ public class AddPokemonCommand : ModuleBase<SocketCommandContext>
             return;
         }
 
-        string userName = CommandHelper.GetDisplayName(Context);;
+        string userName = CommandHelper.GetDisplayName(Context);
         string result = "";
         if (userName == Facade.Instance.JugadorA())
         {
